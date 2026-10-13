@@ -1,0 +1,6 @@
+import { MailIcon, PhoneIcon } from "@/components/icons";
+import { PageHero } from "@/components/page-hero";
+import { ContactForm } from "@/components/contact-form";
+import { site } from "@/lib/content";
+export const metadata = { title: "Contato", description: "Fale com a UNIDAX sobre IA, tecnologia, dados, automação e transformação empresarial." };
+export default function Contato(){return <main><PageHero eyebrow="Contato" title="Qual desafio sua empresa precisa resolver?" text="Talvez a resposta esteja em IA. Talvez esteja em dados, processos, sistemas ou integração. A primeira etapa é entender o problema."/><section className="section"><div className="container contact-grid"><div className="contact-copy"><div className="eyebrow">Converse com um especialista</div><h2>Conte o que você precisa transformar.</h2><p>Quanto mais contexto você compartilhar, melhor poderemos avaliar o problema e sugerir um próximo passo.</p><div className="contact-points"><div className="contact-point"><MailIcon width={19} height={19}/><div><b>E-mail</b><span>{site.email}</span></div></div><div className="contact-point"><PhoneIcon width={19} height={19}/><div><b>Atendimento</b><span>Fale com nossa equipe comercial.</span></div></div></div></div><ContactForm/></div></section></main>}

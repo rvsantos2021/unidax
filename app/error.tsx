@@ -1,0 +1,2 @@
+"use client";
+export default function Error({ reset }: { error: Error & { digest?: string }; reset: () => void }) { return <main><section className="page-hero"><div className="container page-hero-inner"><div className="eyebrow light">Erro</div><h1>Algo saiu do esperado.</h1><p>Tente novamente. Se o problema persistir, entre em contato com a UNIDAX.</p><button className="btn btn-primary" onClick={() => reset()}>Tentar novamente</button></div></section></main>; }

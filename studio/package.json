@@ -1,0 +1,6 @@
+{
+  "name": "unidax-studio",
+  "private": true,
+  "scripts": { "dev": "sanity dev", "build": "sanity build", "deploy": "sanity deploy" },
+  "dependencies": { "@sanity/cli": "latest", "@sanity/types": "latest", "sanity": "latest", "styled-components": "latest" }
+}
