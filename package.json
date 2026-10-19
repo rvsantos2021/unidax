@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "next lint --dir app --dir components --dir lib",
     "typecheck": "tsc --noEmit",
     "check:routes": "node scripts/check-routes.mjs"
   },

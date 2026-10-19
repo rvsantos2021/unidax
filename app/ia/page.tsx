@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowIcon, BotIcon, DatabaseIcon, FlowIcon, SparkIcon } from "@/components/icons";
+import { ArrowIcon } from "@/components/icons";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { aiServices, ecosystem, methodology } from "@/lib/content";
