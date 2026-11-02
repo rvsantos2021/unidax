@@ -24,22 +24,26 @@ async function query<T>(groq: string): Promise<T | null> {
 
 export async function getPublishedInsightsCMS(): Promise<Insight[]> {
   const remote = await query<Insight[]>(`*[_type == "insight" && status == "published"] | order(publishedAt desc){slug,tag,title,meta,excerpt,publishedAt,status,"content":content[].children[].text}`);
-  return remote?.length ? remote : localInsights.filter((item) => item.status === "published");
+  return remote ?? localInsights.filter((item) => item.status === "published");
 }
 
 export async function getInsightCMS(slug: string): Promise<Insight | undefined> {
   const safeSlug = slug.replace(/[^a-z0-9-]/gi, "");
   const item = await query<Insight>(`*[_type == "insight" && status == "published" && slug.current == "${safeSlug}"][0]{"slug":slug.current,tag,title,meta,excerpt,publishedAt,status,"content":content[].children[].text}`);
-  return item || localInsights.find((entry) => entry.slug === slug && entry.status === "published");
+  if (item) return item;
+  if (item === null) return localInsights.find((entry) => entry.slug === slug && entry.status === "published");
+  return undefined;
 }
 
 export async function getCasesCMS(): Promise<Case[]> {
-  const remote = await query<Case[]>(`*[_type == "caseStudy"] | order(_createdAt desc){"slug":slug.current,client,title,category,summary,status}`);
-  return remote?.length ? remote : localCases;
+  const remote = await query<Case[]>(`*[_type == "caseStudy" && status == "published"] | order(_createdAt desc){"slug":slug.current,client,title,category,summary,status}`);
+  return remote ?? localCases.filter((item) => item.status === "published");
 }
 
 export async function getCaseCMS(slug: string): Promise<Case | undefined> {
   const safeSlug = slug.replace(/[^a-z0-9-]/gi, "");
-  const item = await query<Case>(`*[_type == "caseStudy" && slug.current == "${safeSlug}"][0]{"slug":slug.current,client,title,category,summary,status}`);
-  return item || localCases.find((entry) => entry.slug === slug);
+  const item = await query<Case>(`*[_type == "caseStudy" && status == "published" && slug.current == "${safeSlug}"][0]{"slug":slug.current,client,title,category,summary,status}`);
+  if (item) return item;
+  if (item === null) return localCases.find((entry) => entry.slug === slug && entry.status === "published");
+  return undefined;
 }
