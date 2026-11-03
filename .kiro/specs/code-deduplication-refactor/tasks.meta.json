@@ -1,0 +1,516 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Criar `lib/metadata.ts` com `OG_IMAGE_PATH` e `buildLandingMetadata`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712387676
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712401983
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712474437
+      }
+    ],
+    "2.1 Atualizar `app/ia/[slug]/page.tsx` para importar `buildLandingMetadata` de `@/lib/metadata` e substituir o corpo inline do `generateMetadata` pela chamada ao helper": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712387932
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712477391
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712546017
+      }
+    ],
+    "2.2 Atualizar `app/servicos/[slug]/page.tsx` da mesma forma que a tarefa 2.1": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712388295
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712480210
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712549476
+      }
+    ],
+    "2.3 Atualizar `app/insights/[slug]/page.tsx` para importar `OG_IMAGE_PATH` de `@/lib/metadata` e referenciar a constante em vez da string literal `\"/opengraph-image\"`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712388639
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712483268
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712552689
+      }
+    ],
+    "2.4 Atualizar `app/cases/[slug]/page.tsx` da mesma forma que a tarefa 2.3": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712388998
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712486040
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712555660
+      }
+    ],
+    "3. Checkpoint — verificação parcial": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712389322
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712562818
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712606022
+      }
+    ],
+    "4. Criar `components/cta-section.tsx`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712389566
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712609266
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712685464
+      }
+    ],
+    "5.1 Substituir o bloco `<section className=\"cta\">` em `app/page.tsx` por `<CtaSection>` passando `title`, `text` e o `<div className=\"cta-note\">` como `children`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712389799
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712705089
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715453787
+      }
+    ],
+    "5.2 Substituir o bloco CTA inline em `app/ia/page.tsx` por `<CtaSection>` com `title`, `text` e `label` correspondentes ao texto atual": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712390043
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712708424
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715457485
+      }
+    ],
+    "5.3 Substituir o bloco CTA inline em `app/servicos/page.tsx` por `<CtaSection>`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712390259
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712711425
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715460375
+      }
+    ],
+    "5.4 Substituir o bloco CTA inline em `app/cases/page.tsx` por `<CtaSection>`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712390463
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712714910
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715463352
+      }
+    ],
+    "5.5 Substituir o bloco CTA inline em `app/empresa/page.tsx` por `<CtaSection>`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712390791
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712718147
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715466258
+      }
+    ],
+    "6. Criar `components/dark-panel.tsx`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712391234
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712612347
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712688983
+      }
+    ],
+    "7.1 Substituir a seção `dark-panel` com `id=\"metodologia\"` em `app/ia/page.tsx` por `<DarkPanel eyebrow=\"Metodologia\" title=\"Da primeira hipótese à operação.\" className=\"…\">` mantendo o `id` via prop ou wrapping externo conforme melhor abordagem": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712392177
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715470469
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715876735
+      }
+    ],
+    "7.2 Substituir a seção `dark-panel ia-aifirst` em `app/ia/page.tsx` por `<DarkPanel className=\"ia-aifirst\" id=\"ai-first\" …>` ou equivalente que preserve as classes e o `id`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712392591
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715473483
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715880224
+      }
+    ],
+    "7.3 Substituir o dark panel em `app/servicos/page.tsx` por `<DarkPanel>`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712393308
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715476580
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715883222
+      }
+    ],
+    "7.4 Substituir o dark panel em `app/cases/page.tsx` por `<DarkPanel>`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712394693
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715479492
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715886666
+      }
+    ],
+    "7.5 Substituir o dark panel em `app/empresa/page.tsx` por `<DarkPanel>`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712395389
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715482866
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715889767
+      }
+    ],
+    "8. Checkpoint — verificação parcial": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712395705
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715894162
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715924271
+      }
+    ],
+    "9. Criar `components/stats-block.tsx`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712396054
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712615056
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712692422
+      }
+    ],
+    "10.1 Substituir o bloco `.stats` em `app/page.tsx` por `<StatsBlock items={stats} />` mantendo o `<Reveal delay={100}>` envolvente existente": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712396372
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715927914
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716339129
+      }
+    ],
+    "10.2 Substituir o bloco `.stats` em `app/empresa/page.tsx` por `<StatsBlock items={stats} borderless />`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712396730
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715930915
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716342024
+      }
+    ],
+    "11. Criar `components/section-head.tsx`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712397247
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712618055
+      },
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712696129
+      }
+    ],
+    "12.1 Substituir o `.section-head` da seção de serviços IA (eyebrow \"Inteligência artificial\") por `<SectionHead>` mantendo o `<Reveal>` envolvente": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712397549
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715934446
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716345488
+      }
+    ],
+    "12.2 Substituir o `.section-head` da seção de cases por `<SectionHead>` mantendo o `<Reveal>` envolvente": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712397835
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715937650
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716348392
+      }
+    ],
+    "12.3 Substituir o `.section-head` da seção de insights por `<SectionHead>` mantendo o `<Reveal>` envolvente": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712398189
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715941074
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716351538
+      }
+    ],
+    "13. Atualizar `components/seo/landing-page.tsx` para usar `CtaSection` e `DarkPanel`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712398518
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716355011
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716396432
+      }
+    ],
+    "14. Checkpoint final — verificação completa": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712398893
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716399571
+      },
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716525784
+      }
+    ],
+    "2. Migrar páginas de landing para `buildLandingMetadata` e `OG_IMAGE_PATH`": [
+      {
+        "executionId": "0a565b19-f94a-484e-b0e0-d4a9e6c8d2e6",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793712556494
+      }
+    ],
+    "5. Substituir CTAs inline por `<CtaSection>`": [
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715466539
+      }
+    ],
+    "7. Substituir dark panels inline por `<DarkPanel>`": [
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793715890282
+      }
+    ],
+    "10. Substituir stats blocks inline por `<StatsBlock>`": [
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716342216
+      }
+    ],
+    "12. Substituir section-heads inline em `app/page.tsx` por `<SectionHead>`": [
+      {
+        "executionId": "6049d4ee-0032-4ce4-b384-967eb3dabe30",
+        "chatSessionId": "sess_d1d4b317-cf89-40a8-b562-93cbd8fe18d1",
+        "timestamp": 1793716351667
+      }
+    ]
+  }
+}

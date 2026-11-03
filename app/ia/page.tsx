@@ -5,6 +5,8 @@ import {
 } from "@/components/icons";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
+import { CtaSection } from "@/components/cta-section";
+import { DarkPanel } from "@/components/dark-panel";
 import { aiServices, ecosystem, methodology } from "@/lib/content";
 import { aiLandingPages } from "@/lib/seo-content";
 
@@ -385,24 +387,20 @@ export default function IaPage() {
       </section>
 
       {/* ── AI First ── */}
-      <section className="section dark-panel ia-aifirst" id="ai-first">
-        <div className="container">
+      <div id="ai-first">
+        <DarkPanel className="ia-aifirst" eyebrow="AI First" title="Uma estratégia, não uma ferramenta.">
           <div className="ia-aifirst-layout">
             <div className="ia-aifirst-text">
-              <Reveal>
-                <div className="eyebrow light">AI First</div>
-                <h2>Uma estratégia, não uma ferramenta.</h2>
-                <p style={{ maxWidth: 560, marginTop: 16 }}>
-                  Ser <strong style={{ color: "#fff" }}>AI First</strong> significa colocar a inteligência
-                  artificial no centro das decisões de negócio, de produto e de operação — antes de
-                  escolher a tecnologia. É uma postura estratégica: toda nova iniciativa começa pela
-                  pergunta &ldquo;como a IA pode ampliar o valor entregue aqui?&rdquo;, não pelo departamento de TI.
-                </p>
-                <p style={{ maxWidth: 560 }}>
-                  Empresas AI First constroem vantagem composta: cada modelo treinado, cada dado governado,
-                  cada processo augmentado torna a próxima iniciativa mais barata e mais rápida de entregar.
-                </p>
-              </Reveal>
+              <p style={{ maxWidth: 560, marginTop: 16 }}>
+                Ser <strong style={{ color: "#fff" }}>AI First</strong> significa colocar a inteligência
+                artificial no centro das decisões de negócio, de produto e de operação — antes de
+                escolher a tecnologia. É uma postura estratégica: toda nova iniciativa começa pela
+                pergunta &ldquo;como a IA pode ampliar o valor entregue aqui?&rdquo;, não pelo departamento de TI.
+              </p>
+              <p style={{ maxWidth: 560 }}>
+                Empresas AI First constroem vantagem composta: cada modelo treinado, cada dado governado,
+                cada processo augmentado torna a próxima iniciativa mais barata e mais rápida de entregar.
+              </p>
             </div>
             <Reveal delay={100} className="ia-aifirst-chart">
               <div className="ia-visual-panel ia-visual-panel--dark">
@@ -422,8 +420,8 @@ export default function IaPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
+        </DarkPanel>
+      </div>
 
       {/* ── Casos de uso ── */}
       <section className="section" id="casos-de-uso">
@@ -451,16 +449,15 @@ export default function IaPage() {
       </section>
 
       {/* ── Metodologia ── */}
-      <section className="section dark-panel" id="metodologia">
-        <div className="container">
-          <Reveal>
-            <div className="eyebrow light">Metodologia</div>
-            <h2>Da primeira hipótese à operação.</h2>
-            <p className="content-intro">
-              Cada etapa reduz incerteza e aumenta a clareza sobre valor, risco, viabilidade técnica
-              e adoção. Nenhum cliente escala antes de ter evidência.
-            </p>
-          </Reveal>
+      <div id="metodologia">
+        <DarkPanel
+          eyebrow="Metodologia"
+          title="Da primeira hipótese à operação."
+        >
+          <p className="content-intro">
+            Cada etapa reduz incerteza e aumenta a clareza sobre valor, risco, viabilidade técnica
+            e adoção. Nenhum cliente escala antes de ter evidência.
+          </p>
           <div className="bullet-list">
             {methodology.map(([n, t, p], i) => (
               <Reveal key={n} delay={i * 60}>
@@ -471,8 +468,8 @@ export default function IaPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
+        </DarkPanel>
+      </div>
 
       {/* ── Ecossistema ── */}
       <section className="section" id="tecnologias">
@@ -554,18 +551,11 @@ export default function IaPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="cta">
-        <div className="container cta-grid">
-          <div>
-            <h2>Tem um caso de uso em mente?</h2>
-            <p>Vamos avaliar problema, dados, viabilidade e próximo passo — sem compromisso.</p>
-          </div>
-          <Link className="btn btn-light" href="/contato">
-            Falar com a UNIDAX <ArrowIcon />
-          </Link>
-        </div>
-      </section>
+      <CtaSection
+        title="Tem um caso de uso em mente?"
+        text="Vamos avaliar problema, dados, viabilidade e próximo passo — sem compromisso."
+        label="Falar com a UNIDAX"
+      />
 
     </main>
   );

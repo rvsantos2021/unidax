@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/lib/content";
 import { getInsightCMS, getPublishedInsightsCMS } from "@/lib/cms";
+import { OG_IMAGE_PATH } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   const publishedInsights = await getPublishedInsightsCMS();
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article", publishedTime: item.publishedAt, section: item.tag,
       title: item.title, description: item.excerpt,
       url: `${site.url}/insights/${item.slug}`,
-      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: item.title }],
+      images: [{ url: OG_IMAGE_PATH, width: 1200, height: 630, alt: item.title }],
     },
     twitter: { card: "summary_large_image", title: item.title, description: item.excerpt },
   };

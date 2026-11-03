@@ -6,6 +6,9 @@ import {
   LayersIcon, ShieldIcon, SparkIcon,
 } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
+import { CtaSection } from "@/components/cta-section";
+import { StatsBlock } from "@/components/stats-block";
+import { SectionHead } from "@/components/section-head";
 import {
   aiServices, clients, ecosystem,
   enterpriseServices, methodology, stats,
@@ -150,14 +153,7 @@ export default async function Home() {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <div className="stats">
-              {stats.map(([value, label]) => (
-                <div className="stat" key={label}>
-                  <strong>{value}</strong>
-                  <span>{label}</span>
-                </div>
-              ))}
-            </div>
+            <StatsBlock items={stats} />
           </Reveal>
         </div>
       </section>
@@ -230,19 +226,13 @@ export default async function Home() {
       <section className="section services" id="ia">
         <div className="container">
           <Reveal>
-            <div className="section-head">
-              <div>
-                <div className="eyebrow">Inteligência artificial</div>
-                <h2>Inteligência artificial construída para o seu negócio.</h2>
-                <p>
-                  Da estratégia à engenharia: soluções de IA conectadas ao contexto,
-                  aos dados e aos processos da sua empresa.
-                </p>
-              </div>
-              <Link className="link" href="/ia">
-                Conheça a prática de IA <ArrowIcon />
-              </Link>
-            </div>
+            <SectionHead
+              eyebrow="Inteligência artificial"
+              title="Inteligência artificial construída para o seu negócio."
+              text="Da estratégia à engenharia: soluções de IA conectadas ao contexto, aos dados e aos processos da sua empresa."
+              linkLabel="Conheça a prática de IA"
+              linkHref="/ia"
+            />
           </Reveal>
 
           <div className="service-grid">
@@ -393,16 +383,13 @@ export default async function Home() {
       <section className="section cases">
         <div className="container">
           <Reveal>
-            <div className="section-head">
-              <div>
-                <div className="eyebrow">Cases</div>
-                <h2>Tecnologia aplicada. Resultado comprovado.</h2>
-                <p>Experiência construída em parceria com organizações que confiam na UNIDAX.</p>
-              </div>
-              <Link className="link" href="/cases">
-                Ver todos os cases <ArrowIcon />
-              </Link>
-            </div>
+            <SectionHead
+              eyebrow="Cases"
+              title="Tecnologia aplicada. Resultado comprovado."
+              text="Experiência construída em parceria com organizações que confiam na UNIDAX."
+              linkLabel="Ver todos os cases"
+              linkHref="/cases"
+            />
           </Reveal>
           <div className="case-grid">
             {cases.map((item, i) => (
@@ -435,19 +422,13 @@ export default async function Home() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <div className="section-head">
-              <div>
-                <div className="eyebrow">UNIDAX Insights</div>
-                <h2>Conhecimento para transformar negócios.</h2>
-                <p>
-                  Conteúdo prático para líderes que precisam tomar decisões melhores
-                  sobre tecnologia, dados e inteligência artificial.
-                </p>
-              </div>
-              <Link className="link" href="/insights">
-                Ver todos os insights <ArrowIcon />
-              </Link>
-            </div>
+            <SectionHead
+              eyebrow="UNIDAX Insights"
+              title="Conhecimento para transformar negócios."
+              text="Conteúdo prático para líderes que precisam tomar decisões melhores sobre tecnologia, dados e inteligência artificial."
+              linkLabel="Ver todos os insights"
+              linkHref="/insights"
+            />
           </Reveal>
           <div className="insight-grid">
             {insights.map((item, i) => {
@@ -479,24 +460,15 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="cta">
-        <div className="container cta-grid">
-          <div>
-            <h2>Qual desafio sua empresa precisa resolver?</h2>
-            <p>
-              Talvez a resposta esteja em IA. Talvez esteja em dados, processos,
-              sistemas ou integração. A primeira etapa é entender o problema.
-            </p>
-            <div className="cta-note">
-              Vamos transformar a próxima oportunidade em uma solução inteligente.
-            </div>
-          </div>
-          <Link className="btn btn-light" href="/contato">
-            Fale com um especialista <ArrowIcon />
-          </Link>
+      <CtaSection
+        title="Qual desafio sua empresa precisa resolver?"
+        text="Talvez a resposta esteja em IA. Talvez esteja em dados, processos, sistemas ou integração. A primeira etapa é entender o problema."
+        label="Fale com um especialista"
+      >
+        <div className="cta-note">
+          Vamos transformar a próxima oportunidade em uma solução inteligente.
         </div>
-      </section>
+      </CtaSection>
     </main>
   );
 }

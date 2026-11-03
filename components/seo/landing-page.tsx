@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ArrowIcon } from "@/components/icons";
+import { CtaSection } from "@/components/cta-section";
+import { DarkPanel } from "@/components/dark-panel";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { FaqSection, BreadcrumbJsonLd } from "@/components/seo/json-ld";
@@ -16,8 +16,22 @@ export function LandingPage({ item, kind }: { item: LandingContent; kind: "ia" |
     <PageHero eyebrow={item.eyebrow} title={item.h1} text={item.description} />
     <section className="section"><div className="container content-intro"><Reveal><div className="eyebrow">Abordagem UNIDAX</div><h2>Começar pelo desafio. Projetar a solução com critério.</h2><p>{item.intro}</p></Reveal></div></section>
     <section className="section services"><div className="container"><div className="detail-grid">{item.benefits.map((benefit, index) => <Reveal key={benefit.title} delay={index * 70}><article className="detail-card"><span className="number">0{index + 1}</span><h3>{benefit.title}</h3><p>{benefit.text}</p></article></Reveal>)}</div></div></section>
-    <section className="section dark-panel"><div className="container"><Reveal><div className="eyebrow light">Escopo possível</div><h2>Um caminho claro da descoberta à execução.</h2><p className="content-intro">As entregas finais são definidas de acordo com o contexto, a complexidade e os objetivos de cada iniciativa.</p></Reveal><div className="bullet-list">{item.deliverables.map((deliverable, index) => <Reveal key={deliverable} delay={index * 45}><div className="bullet"><strong>0{index + 1} · {deliverable}</strong></div></Reveal>)}</div></div></section>
+    <DarkPanel eyebrow="Escopo possível" title="Um caminho claro da descoberta à execução.">
+      <p className="content-intro">As entregas finais são definidas de acordo com o contexto, a complexidade e os objetivos de cada iniciativa.</p>
+      <div className="bullet-list">
+        {item.deliverables.map((deliverable, index) => (
+          <Reveal key={deliverable} delay={index * 45}>
+            <div className="bullet"><strong>0{index + 1} · {deliverable}</strong></div>
+          </Reveal>
+        ))}
+      </div>
+    </DarkPanel>
     <FaqSection items={item.faqs} />
-    <section className="cta"><div className="container cta-grid"><div><h2>{item.cta}</h2><p>Compartilhe o contexto. Ajudamos a definir o próximo passo mais adequado.</p></div><Link className="btn btn-light" href={`/contato?interesse=${encodeURIComponent(item.title)}`}>Conversar com especialista <ArrowIcon /></Link></div></section>
+    <CtaSection
+      title={item.cta}
+      text="Compartilhe o contexto. Ajudamos a definir o próximo passo mais adequado."
+      href={`/contato?interesse=${encodeURIComponent(item.title)}`}
+      label="Conversar com especialista"
+    />
   </main>;
 }
