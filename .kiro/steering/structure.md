@@ -1,24 +1,28 @@
+---
+inclusion: always
+---
+
 # Project Structure
 
-## Root
+## Directory Overview
 
 ```
 app/              Next.js App Router — pages and API routes
 components/       Shared UI components
 lib/              Data layer and content utilities
-studio/           Independent Sanity Studio project (separate package.json)
+studio/           Independent Sanity Studio (separate package.json — never import from app/)
 public/           Static assets (images, favicon)
 scripts/          Build/validation utilities
-.kiro/            Kiro IDE configuration (steering, hooks, etc.)
+.kiro/            Kiro IDE configuration
 ```
 
-## `app/` — Pages
+## `app/` — Pages & Routes
 
 | Path | Description |
 |---|---|
 | `layout.tsx` | Root layout: fonts, global metadata, JSON-LD org schema, SiteHeader, Footer, Analytics |
 | `page.tsx` | Homepage — async Server Component, fetches cases + insights in parallel |
-| `globals.css` | All site CSS — custom properties, component classes, animations |
+| `globals.css` | All site CSS — custom properties, component classes, animations. No CSS framework. |
 | `robots.ts` / `sitemap.ts` | SEO metadata generation |
 | `opengraph-image.tsx` | Dynamic OG image |
 | `error.tsx` / `not-found.tsx` | Error boundary and 404 |
@@ -46,28 +50,29 @@ scripts/          Build/validation utilities
 | `seo/json-ld.tsx` | Server | JSON-LD structured data component |
 | `seo/landing-page.tsx` | Server | Shared layout for SEO landing pages |
 
-Client Components are the **exception** — only when browser APIs or interactivity are required.
+**Default to Server Components.** Use `"use client"` only when browser APIs or interactivity are strictly required.
 
 ## `lib/`
 
 | File | Description |
 |---|---|
-| `content.ts` | All static/fallback content as typed TypeScript constants (`site`, `stats`, `aiServices`, `cases`, `insights`, etc.) plus helper functions. Types `Case` and `Insight` are defined here. |
-| `cms.ts` | CMS adapter — queries Sanity first via raw `fetch` + GROQ; falls back to `content.ts` if Sanity is unconfigured or returns empty. Marked `server-only`. |
+| `content.ts` | Static/fallback content as typed TypeScript constants (`site`, `stats`, `aiServices`, `cases`, `insights`, etc.). Types `Case` and `Insight` are defined here. Always available — no external dependency. |
+| `cms.ts` | CMS adapter — queries Sanity via raw `fetch` + GROQ; falls back to `content.ts` if Sanity is unconfigured or returns empty. Marked `server-only`. Never call from Client Components. |
 | `seo-content.ts` | `LandingContent` data for all SEO landing pages: 3 AI service pages + 6 enterprise service pages. Consumed by `/ia/[slug]` and `/servicos/[slug]`. |
 
 ## `studio/`
 
-Separate Sanity Studio project. **Not** part of the Next.js build; never import from here in `app/` or `components/`. Schema defines two document types: `insight` and `caseStudy`.
+Independent Sanity Studio. **Never import from `studio/` inside `app/` or `components/`.** It is excluded from `tsconfig.json` compilation — keep it that way. Schema defines two document types: `insight` and `caseStudy`.
 
 ## `scripts/`
 
-`check-routes.mjs` — pre-deploy integrity check: verifies required page files exist and slug catalogs in `seo-content.ts` are consistent. Run before every deploy.
+`check-routes.mjs` — pre-deploy integrity check: verifies required page files exist and slug catalogs in `seo-content.ts` are consistent. **Run before every deploy.**
 
 ## Key Conventions
 
-- **Path alias**: `@/` resolves to the repo root — use it everywhere (e.g., `@/lib/content`, `@/components/icons`).
-- **File naming**: kebab-case for files, PascalCase for component/function names.
-- **Exports**: named exports in `components/` and `lib/`; default exports only for page files (Next.js requirement).
-- **`tsconfig.json`**: `studio/` is excluded from compilation — keep it that way.
-- **Adding a new SEO landing page**: add an entry to the appropriate array in `lib/seo-content.ts`, create the page file, then run `npm run check:routes` to verify.
+- **Path alias**: `@/` resolves to the repo root — always use it (e.g., `@/lib/content`, `@/components/icons`). Never use relative `../` imports across top-level directories.
+- **File naming**: kebab-case for files, PascalCase for component and function names.
+- **Exports**: named exports in `components/` and `lib/`; default exports only for Next.js page files.
+- **Adding a new SEO landing page**: add an entry to the appropriate array in `lib/seo-content.ts`, create the page file, then run `npm run check:routes` to verify consistency.
+- **All CSS lives in `app/globals.css`**: do not create separate CSS files or introduce CSS-in-JS or utility class libraries.
+- **Data flow**: pages fetch via `lib/cms.ts` (server-side); `lib/cms.ts` falls back to `lib/content.ts`. Never fetch Sanity directly from a component.

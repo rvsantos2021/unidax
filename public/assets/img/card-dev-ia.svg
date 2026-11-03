@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" fill="none">
+  <!-- Background gradient -->
+  <rect width="600" height="300" fill="url(#bgDev)"/>
+  <defs>
+    <linearGradient id="bgDev" x1="0" y1="0" x2="600" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09131b"/>
+      <stop offset="100%" stop-color="#142030"/>
+    </linearGradient>
+    <radialGradient id="glowDev" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dc2747" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#dc2747" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Glow -->
+  <ellipse cx="300" cy="150" rx="220" ry="130" fill="url(#glowDev)"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="50"  x2="600" y2="50"  stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="250" x2="600" y2="250" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="100" y1="0" x2="100" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="300" y1="0" x2="300" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="500" y1="0" x2="500" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <!-- Neural network nodes -->
+  <!-- Layer 1 (input) -->
+  <circle cx="130" cy="90"  r="12" fill="rgba(220,39,71,0.25)" stroke="#dc2747" stroke-width="1.5"/>
+  <circle cx="130" cy="150" r="12" fill="rgba(220,39,71,0.25)" stroke="#dc2747" stroke-width="1.5"/>
+  <circle cx="130" cy="210" r="12" fill="rgba(220,39,71,0.25)" stroke="#dc2747" stroke-width="1.5"/>
+  <!-- Layer 2 (hidden) -->
+  <circle cx="250" cy="70"  r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <circle cx="250" cy="120" r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <circle cx="250" cy="170" r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <circle cx="250" cy="220" r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <!-- Layer 3 (hidden) -->
+  <circle cx="370" cy="90"  r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <circle cx="370" cy="150" r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <circle cx="370" cy="210" r="12" fill="rgba(244,173,27,0.2)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <!-- Layer 4 (output) -->
+  <circle cx="470" cy="120" r="14" fill="rgba(220,39,71,0.3)" stroke="#dc2747" stroke-width="2"/>
+  <circle cx="470" cy="180" r="14" fill="rgba(220,39,71,0.3)" stroke="#dc2747" stroke-width="2"/>
+  <!-- Connections L1->L2 -->
+  <line x1="142" y1="90"  x2="238" y2="70"  stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="90"  x2="238" y2="120" stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="90"  x2="238" y2="170" stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="90"  x2="238" y2="220" stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="150" x2="238" y2="70"  stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="150" x2="238" y2="120" stroke="rgba(220,39,71,0.22)" stroke-width="1.2"/>
+  <line x1="142" y1="150" x2="238" y2="170" stroke="rgba(220,39,71,0.22)" stroke-width="1.2"/>
+  <line x1="142" y1="150" x2="238" y2="220" stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="210" x2="238" y2="120" stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="210" x2="238" y2="170" stroke="rgba(220,39,71,0.18)" stroke-width="1"/>
+  <line x1="142" y1="210" x2="238" y2="220" stroke="rgba(220,39,71,0.22)" stroke-width="1.2"/>
+  <!-- Connections L2->L3 -->
+  <line x1="262" y1="70"  x2="358" y2="90"  stroke="rgba(244,173,27,0.15)" stroke-width="1"/>
+  <line x1="262" y1="70"  x2="358" y2="150" stroke="rgba(244,173,27,0.15)" stroke-width="1"/>
+  <line x1="262" y1="120" x2="358" y2="90"  stroke="rgba(244,173,27,0.2)"  stroke-width="1"/>
+  <line x1="262" y1="120" x2="358" y2="150" stroke="rgba(244,173,27,0.2)"  stroke-width="1"/>
+  <line x1="262" y1="120" x2="358" y2="210" stroke="rgba(244,173,27,0.15)" stroke-width="1"/>
+  <line x1="262" y1="170" x2="358" y2="150" stroke="rgba(244,173,27,0.2)"  stroke-width="1"/>
+  <line x1="262" y1="170" x2="358" y2="210" stroke="rgba(244,173,27,0.2)"  stroke-width="1"/>
+  <line x1="262" y1="220" x2="358" y2="150" stroke="rgba(244,173,27,0.15)" stroke-width="1"/>
+  <line x1="262" y1="220" x2="358" y2="210" stroke="rgba(244,173,27,0.2)"  stroke-width="1"/>
+  <!-- Connections L3->L4 -->
+  <line x1="382" y1="90"  x2="456" y2="120" stroke="rgba(220,39,71,0.22)" stroke-width="1.5"/>
+  <line x1="382" y1="90"  x2="456" y2="180" stroke="rgba(220,39,71,0.15)" stroke-width="1"/>
+  <line x1="382" y1="150" x2="456" y2="120" stroke="rgba(220,39,71,0.22)" stroke-width="1.5"/>
+  <line x1="382" y1="150" x2="456" y2="180" stroke="rgba(220,39,71,0.22)" stroke-width="1.5"/>
+  <line x1="382" y1="210" x2="456" y2="120" stroke="rgba(220,39,71,0.15)" stroke-width="1"/>
+  <line x1="382" y1="210" x2="456" y2="180" stroke="rgba(220,39,71,0.22)" stroke-width="1.5"/>
+  <!-- Code snippet decoration -->
+  <rect x="30" y="245" width="180" height="40" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="42" y="261" font-family="monospace" font-size="9" fill="rgba(244,173,27,0.7)">def train_model(data):</text>
+  <text x="42" y="276" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.4)">    return pipeline.fit(data)</text>
+  <!-- Output label -->
+  <rect x="490" y="108" width="70" height="20" rx="4" fill="rgba(220,39,71,0.2)" stroke="rgba(220,39,71,0.4)" stroke-width="1"/>
+  <text x="525" y="122" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="rgba(220,39,71,0.9)" letter-spacing="0.08em">OUTPUT</text>
+</svg>

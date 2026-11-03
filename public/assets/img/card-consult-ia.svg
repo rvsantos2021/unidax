@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" fill="none">
+  <defs>
+    <linearGradient id="bgCon" x1="0" y1="0" x2="600" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09131b"/>
+      <stop offset="100%" stop-color="#0f1e2a"/>
+    </linearGradient>
+    <radialGradient id="glowCon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f4ad1b" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f4ad1b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bgCon)"/>
+  <ellipse cx="300" cy="150" rx="240" ry="140" fill="url(#glowCon)"/>
+  <!-- Grid -->
+  <line x1="0"   y1="60"  x2="600" y2="60"  stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0"   y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0"   y1="180" x2="600" y2="180" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0"   y1="240" x2="600" y2="240" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="75"  y1="0"   x2="75"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="150" y1="0"   x2="150" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="300" y1="0"   x2="300" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="450" y1="0"   x2="450" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="525" y1="0"   x2="525" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <!-- Bar chart -->
+  <rect x="80"  y="200" width="40" height="60" rx="4" fill="rgba(220,39,71,0.25)" stroke="rgba(220,39,71,0.5)" stroke-width="1.5"/>
+  <rect x="140" y="160" width="40" height="100" rx="4" fill="rgba(220,39,71,0.3)" stroke="rgba(220,39,71,0.6)" stroke-width="1.5"/>
+  <rect x="200" y="130" width="40" height="130" rx="4" fill="rgba(244,173,27,0.3)" stroke="rgba(244,173,27,0.6)" stroke-width="1.5"/>
+  <rect x="260" y="100" width="40" height="160" rx="4" fill="rgba(244,173,27,0.35)" stroke="rgba(244,173,27,0.7)" stroke-width="1.5"/>
+  <rect x="320" y="75"  width="40" height="185" rx="4" fill="rgba(244,173,27,0.4)" stroke="rgba(244,173,27,0.8)" stroke-width="2"/>
+  <!-- Growth line -->
+  <polyline points="100,220 160,180 220,150 280,120 340,92" stroke="#dc2747" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dots on line -->
+  <circle cx="100" cy="220" r="5" fill="#dc2747"/>
+  <circle cx="160" cy="180" r="5" fill="#dc2747"/>
+  <circle cx="220" cy="150" r="5" fill="#dc2747"/>
+  <circle cx="280" cy="120" r="5" fill="#dc2747"/>
+  <circle cx="340" cy="92"  r="7" fill="#dc2747" stroke="rgba(220,39,71,0.3)" stroke-width="6"/>
+  <!-- Roadmap steps on the right -->
+  <rect x="410" y="60"  width="150" height="36" rx="8" fill="rgba(220,39,71,0.15)" stroke="rgba(220,39,71,0.35)" stroke-width="1"/>
+  <circle cx="426" cy="78" r="8" fill="rgba(220,39,71,0.4)" stroke="#dc2747" stroke-width="1.5"/>
+  <text x="426" y="82" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fff">1</text>
+  <text x="442" y="82" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.75)">Diagnóstico</text>
+  <line x1="426" y1="96" x2="426" y2="108" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="410" y="108" width="150" height="36" rx="8" fill="rgba(244,173,27,0.12)" stroke="rgba(244,173,27,0.3)" stroke-width="1"/>
+  <circle cx="426" cy="126" r="8" fill="rgba(244,173,27,0.4)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <text x="426" y="130" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fff">2</text>
+  <text x="442" y="130" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.75)">Priorização</text>
+  <line x1="426" y1="144" x2="426" y2="156" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="410" y="156" width="150" height="36" rx="8" fill="rgba(220,39,71,0.15)" stroke="rgba(220,39,71,0.35)" stroke-width="1"/>
+  <circle cx="426" cy="174" r="8" fill="rgba(220,39,71,0.4)" stroke="#dc2747" stroke-width="1.5"/>
+  <text x="426" y="178" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fff">3</text>
+  <text x="442" y="178" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.75)">Roadmap</text>
+  <line x1="426" y1="192" x2="426" y2="204" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="410" y="204" width="150" height="36" rx="8" fill="rgba(244,173,27,0.15)" stroke="rgba(244,173,27,0.4)" stroke-width="1.5"/>
+  <circle cx="426" cy="222" r="8" fill="rgba(244,173,27,0.5)" stroke="#f4ad1b" stroke-width="1.5"/>
+  <text x="426" y="226" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="800" fill="#fff">4</text>
+  <text x="442" y="226" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.75)">Execução</text>
+  <!-- Upward arrow indicator -->
+  <rect x="370" y="60" width="28" height="50" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="384" y="84" text-anchor="middle" font-family="sans-serif" font-size="16" fill="rgba(244,173,27,0.8)">↑</text>
+  <text x="384" y="100" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(244,173,27,0.6)">ROI</text>
+</svg>

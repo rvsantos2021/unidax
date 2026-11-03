@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" fill="none">
+  <defs>
+    <linearGradient id="bgAg" x1="0" y1="0" x2="600" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09131b"/>
+      <stop offset="100%" stop-color="#111d28"/>
+    </linearGradient>
+    <radialGradient id="glowAg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dc2747" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#dc2747" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bgAg)"/>
+  <ellipse cx="300" cy="150" rx="200" ry="120" fill="url(#glowAg)"/>
+  <!-- Grid subtle -->
+  <line x1="0"   y1="75"  x2="600" y2="75"  stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <line x1="0"   y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <line x1="0"   y1="225" x2="600" y2="225" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <line x1="150" y1="0"   x2="150" y2="300" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <line x1="300" y1="0"   x2="300" y2="300" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <line x1="450" y1="0"   x2="450" y2="300" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <!-- Central agent node -->
+  <rect x="256" y="112" width="88" height="76" rx="16" fill="rgba(9,19,27,0.9)" stroke="#dc2747" stroke-width="2"/>
+  <!-- Bot face -->
+  <rect x="272" y="128" width="56" height="44" rx="10" fill="rgba(220,39,71,0.15)"/>
+  <circle cx="289" cy="144" r="6" fill="rgba(220,39,71,0.8)"/>
+  <circle cx="311" cy="144" r="6" fill="rgba(220,39,71,0.8)"/>
+  <rect x="284" y="156" width="32" height="5" rx="2.5" fill="rgba(255,255,255,0.3)"/>
+  <!-- Bot antenna -->
+  <line x1="300" y1="112" x2="300" y2="96" stroke="#dc2747" stroke-width="2"/>
+  <circle cx="300" cy="93" r="5" fill="#dc2747"/>
+  <!-- Orbit ring -->
+  <ellipse cx="300" cy="150" rx="90" ry="90" stroke="rgba(220,39,71,0.2)" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Satellite nodes -->
+  <!-- ERP -->
+  <rect x="155" y="68" width="72" height="32" rx="8" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="191" y="88" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)">ERP</text>
+  <line x1="227" y1="84" x2="258" y2="120" stroke="rgba(220,39,71,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Dados -->
+  <rect x="365" y="65" width="80" height="32" rx="8" fill="rgba(255,255,255,0.07)" stroke="rgba(244,173,27,0.35)" stroke-width="1"/>
+  <text x="405" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)">Dados</text>
+  <line x1="365" y1="81" x2="342" y2="120" stroke="rgba(244,173,27,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- API -->
+  <rect x="155" y="200" width="72" height="32" rx="8" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="191" y="220" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)">APIs</text>
+  <line x1="227" y1="216" x2="258" y2="188" stroke="rgba(220,39,71,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Processos -->
+  <rect x="365" y="200" width="80" height="32" rx="8" fill="rgba(255,255,255,0.07)" stroke="rgba(220,39,71,0.3)" stroke-width="1"/>
+  <text x="405" y="220" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.8)">Processos</text>
+  <line x1="365" y1="216" x2="342" y2="188" stroke="rgba(220,39,71,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Chat bubble left side -->
+  <rect x="30" y="100" width="105" height="38" rx="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <path d="M60 138 L50 148 L70 138" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <rect x="42" y="112" width="60" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="42" y="123" width="40" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <!-- Chat bubble right side (response) -->
+  <rect x="465" y="130" width="105" height="38" rx="10" fill="rgba(220,39,71,0.15)" stroke="rgba(220,39,71,0.3)" stroke-width="1"/>
+  <path d="M540 130 L550 120 L530 130" fill="rgba(220,39,71,0.15)" stroke="rgba(220,39,71,0.3)" stroke-width="1"/>
+  <rect x="477" y="142" width="60" height="6" rx="3" fill="rgba(220,39,71,0.5)"/>
+  <rect x="477" y="153" width="45" height="6" rx="3" fill="rgba(220,39,71,0.3)"/>
+  <!-- Connecting arrows -->
+  <line x1="135" y1="130" x2="255" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <line x1="345" y1="155" x2="465" y2="149" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  <!-- Task executed badge -->
+  <rect x="240" y="250" width="120" height="26" rx="13" fill="rgba(220,39,71,0.2)" stroke="rgba(220,39,71,0.5)" stroke-width="1"/>
+  <text x="300" y="267" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="800" fill="rgba(220,39,71,0.95)" letter-spacing="0.05em">✓ TAREFA EXECUTADA</text>
+</svg>
