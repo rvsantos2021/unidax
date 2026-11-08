@@ -21,10 +21,10 @@ export const metadata = {
 ───────────────────────────────────────────────────────────── */
 
 const impactStats = [
-  { value: "73%",     label: "das Frontier Firms crescem acima da média do setor após adoção estrutural de IA" },
-  { value: "3.4×",   label: "maior ROI em projetos de IA quando precedidos de diagnóstico estratégico" },
-  { value: "68%",    label: "das tarefas repetitivas de gestão e análise são elegíveis à automação inteligente" },
-  { value: "12 sem.",label: "tempo médio do piloto ao resultado mensurável com metodologia UNIDAX" },
+  { value: "+100", label: "clientes atendidos pela UNIDAX" },
+  { value: "+300", label: "projetos realizados" },
+  { value: "+280K", label: "horas de experiência acumulada em projetos" },
+  { value: "+35", label: "anos de experiência" },
 ] as const;
 
 /** As quatro perguntas que definem o sucesso de qualquer projeto de IA */

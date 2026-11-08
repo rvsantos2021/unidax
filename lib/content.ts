@@ -51,8 +51,17 @@ export const cases: Case[] = [
   { slug: "amib", client: "AMIB", title: "Integração e automação", category: "Integração", summary: "Case em construção com escopo, solução e resultados autorizados pelo cliente.", status: "draft" },
 ];
 
+
+export type PortableTextBlock = {
+  _type?: string;
+  _key?: string;
+  style?: string;
+  listItem?: "bullet" | "number";
+  children?: { _type?: string; _key?: string; text?: string; marks?: string[] }[];
+  markDefs?: { _key: string; _type?: string; href?: string }[];
+};
 export type Insight = {
-  slug: string; tag: string; title: string; meta: string; excerpt: string; publishedAt: string; status: "published" | "draft"; content: string[];
+  slug: string; tag: string; title: string; meta: string; excerpt: string; publishedAt: string; status: "published" | "draft"; content: string[] | PortableTextBlock[];
 };
 export const insights: Insight[] = [
   { slug: "processos-automatizados-com-ia", tag: "IA", title: "Como identificar processos que realmente deveriam ser automatizados com IA", meta: "Estratégia · 8 min", excerpt: "Um framework prático para separar automação de oportunidade real de inteligência artificial.", publishedAt: "2026-10-01", status: "published", content: ["Nem todo processo manual precisa de IA. O primeiro filtro é entender o volume, a variabilidade, o custo da decisão e a disponibilidade de dados.", "A oportunidade fica mais interessante quando existe contexto não estruturado, necessidade de interpretação ou decisões recorrentes que podem ser apoiadas por modelos e agentes.", "Antes de escalar, defina uma métrica operacional, construa um piloto controlado e valide segurança, governança e experiência do usuário."] },

@@ -299,8 +299,7 @@ export default async function Home() {
             <p>
               O verdadeiro potencial da inteligência artificial aparece quando ela
               está conectada aos dados, <strong>processos</strong>, sistemas e pessoas
-              que fazem o negócio acontecer.{" "}
-              <strong>sua estratégia a um único fornecedor.</strong>
+              que fazem o negócio acontecer.
             </p>
             <Link className="link" href="/servicos">
               Saiba mais <ArrowIcon />
@@ -380,7 +379,7 @@ export default async function Home() {
       </section>
 
       {/* ── Cases ── */}
-      <section className="section cases">
+      {cases.length > 0 && <section className="section cases">
         <div className="container">
           <Reveal>
             <SectionHead
@@ -416,7 +415,7 @@ export default async function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* ── Insights — com ilustrações visuais ── */}
       <section className="section">

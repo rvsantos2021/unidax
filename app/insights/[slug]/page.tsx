@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { site } from "@/lib/content";
 import { getInsightCMS, getPublishedInsightsCMS } from "@/lib/cms";
 import { OG_IMAGE_PATH } from "@/lib/metadata";
+import { JsonLd } from "@/components/seo/json-ld";
+import { InsightContent } from "@/components/insight-content";
 
 export async function generateStaticParams() {
   const publishedInsights = await getPublishedInsightsCMS();
@@ -44,9 +46,9 @@ export default async function Insight({ params }: { params: Promise<{ slug: stri
       <div className="eyebrow">{item.tag}</div><h1>{item.title}</h1>
       <p className="article-lead">{item.excerpt}</p>
       <div className="article-meta">{new Intl.DateTimeFormat("pt-BR", { dateStyle: "long" }).format(new Date(`${item.publishedAt}T12:00:00`))} · {item.meta}</div>
-      <div className="article-content">{item.content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      <div className="article-content"><InsightContent content={item.content} /></div>
       <Link className="link" href="/insights">← Voltar para Insights</Link>
     </div></article>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <JsonLd data={jsonLd} />
   </main>;
 }
