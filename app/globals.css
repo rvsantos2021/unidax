@@ -220,3 +220,16 @@ body.menu-open{overflow:hidden}
 .article-art--transformacao .article-art-glow{background:radial-gradient(circle,rgba(244,173,27,.3),transparent 65%)}
 .article-art--dados .article-art-glow{background:radial-gradient(circle,rgba(23,114,69,.3),transparent 65%)}
 .article-art-tag{position:absolute;top:14px;left:14px;z-index:3;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.08);padding:4px 9px;border-radius:20px;border:1px solid rgba(255,255,255,.1)}
+
+/* Visão & Missão grid */
+.vmv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.vmv-card{border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:16px;padding:32px;background:#fff}
+@media(max-width:700px){.vmv-grid{grid-template-columns:1fr}}
+
+/* Empresa — história card */
+.historia-card{background:var(--soft);border-radius:16px;padding:32px;border-left:3px solid var(--gold)}
+.historia-card p{font-size:14px;line-height:1.72}
+
+/* Empresa — valores grid */
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:700px){.values-grid{grid-template-columns:1fr}}
