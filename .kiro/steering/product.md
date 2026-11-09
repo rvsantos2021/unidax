@@ -4,29 +4,40 @@ inclusion: always
 
 # Product: UNIDAX Website
 
-UNIDAX is a Brazilian B2B technology and AI consulting company. This repository is the institutional marketing website (v4.4.0). The primary business goal is **lead generation** via a contact form.
+UNIDAX is a Brazilian B2B technology and AI consulting company. This repository is the institutional marketing website (v4.4.0). The primary business goal is **lead generation** — every page must have a clear path to the contact form at `/contato`.
 
 ## Service Portfolios
 
-- **AI services** (`/ia/[slug]`): custom AI development, strategic consulting, enterprise AI agents
-- **Enterprise services** (`/servicos/[slug]`): ERP/Dynamics, custom systems, Data & Analytics, Power Platform, Outsourcing, Support
+| Area | Route | Services |
+|---|---|---|
+| AI | `/ia/[slug]` | Custom AI development, strategic consulting, enterprise AI agents |
+| Enterprise | `/servicos/[slug]` | ERP/Dynamics, custom systems, Data & Analytics, Power Platform, Outsourcing, Support |
 
-## Key Features
+## Content Features
 
-- SEO-optimized landing pages for each service
-- Thought-leadership articles ("Insights") and client case studies ("Cases")
-- Contact form: sends email via Resend, optionally forwards to a CRM webhook
+- SEO-optimized landing pages per service (`lib/seo-content.ts`)
+- Thought-leadership articles: "Insights" (`/insights/[slug]`)
+- Client success stories: "Cases" (`/cases/[slug]`)
+- Contact form: Resend email delivery + optional CRM webhook forwarding
 
-## Critical Rules
+## Non-Negotiable Rules
 
-- **Language**: every user-facing string — copy, labels, metadata, error messages, aria labels — must be in **Portuguese (pt-BR)**. Never use English in UI output.
-- **No e-commerce, no auth, no backend database** — the site is stateless from the user's perspective.
-- **LGPD compliance**: GA4 must only load after explicit user consent stored in `localStorage`. Never load analytics scripts unconditionally.
-- **Content source**: data comes from typed TypeScript constants in `lib/content.ts` (always available) or from Sanity CMS (optional, queried via raw `fetch` + GROQ in `lib/cms.ts`). The CMS layer always falls back to local constants — never assume Sanity is configured.
-- **Lead capture is the conversion goal**: every page should have a clear path to the contact form. Do not remove or obscure CTAs that drive to `/contato`.
+### Language
+All user-facing text — copy, labels, placeholders, error messages, `aria-label`, `alt` text, metadata — **must be in Portuguese (pt-BR)**. Never output English in the UI.
 
-## What This Site Is Not
+### Lead Capture
+Do not remove or obscure CTAs that drive to `/contato`. Every page must offer a conversion path.
 
-- Not a Sanity-driven app — the main Next.js app never imports from `studio/`
-- Not a SPA — it uses Next.js App Router with Server Components as the default; Client Components are the exception
-- Not styled with a CSS framework — all styles live in `app/globals.css` using custom CSS properties
+### LGPD / Analytics
+GA4 loads **only after explicit user consent** stored in `localStorage`. Never inject analytics scripts unconditionally. This is handled in `components/analytics.tsx` — do not bypass it.
+
+### Content / Data Layer
+- `lib/content.ts` — typed TypeScript constants; always available, no external dependency.
+- `lib/cms.ts` — Sanity adapter (server-only); **always falls back to `lib/content.ts`** when Sanity is unconfigured or returns empty.
+- Pages fetch via `lib/cms.ts`. Never query Sanity directly from a component, and never assume Sanity is configured.
+
+### Scope Constraints
+- **No e-commerce, no authentication, no backend database.** The site is stateless from the user's perspective.
+- **No imports from `studio/`** inside `app/` or `components/`. The Sanity Studio is an independent project.
+- **No CSS framework.** All styles live in `app/globals.css` using custom CSS properties.
+- **Server Components are the default.** Add `"use client"` only when browser APIs or interactivity are strictly required.
