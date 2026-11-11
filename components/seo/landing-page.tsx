@@ -20,8 +20,8 @@ export function LandingPage({ item, kind }: { item: LandingContent; kind: "ia" |
       <section className="section">
         <div className="container">
           <Reveal>
-            <div className="eyebrow">Capacidades de IA</div>
-            <h2>O que construímos em sistemas de IA.</h2>
+            <div className="eyebrow">{item.capabilitiesEyebrow ?? "Capacidades de IA"}</div>
+            <h2>{item.capabilitiesTitle ?? "O que construímos em sistemas de IA."}</h2>
             <p className="content-intro">Cada projeto de IA tem contornos próprios. Estes são os tipos de sistemas que desenhamos, integramos e colocamos em produção, sempre com qualidade, segurança e governança.</p>
           </Reveal>
           <div className="capability-grid detail-grid">
