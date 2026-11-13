@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+﻿import type { ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -9,9 +9,10 @@ import { Reveal } from "@/components/reveal";
 import { CtaSection } from "@/components/cta-section";
 import { StatsBlock } from "@/components/stats-block";
 import { SectionHead } from "@/components/section-head";
+import { HeroCarousel } from "@/components/hero-carousel";
 import {
   aiServices, clients, ecosystem,
-  enterpriseServices, methodology, stats,
+  enterpriseServices, methodology, solutions, stats,
 } from "@/lib/content";
 import { aiLandingPages } from "@/lib/seo-content";
 import { getCasesCMS, getPublishedInsightsCMS } from "@/lib/cms";
@@ -41,6 +42,12 @@ const serviceLabels = [
   "03 · AGENTES INTELIGENTES",
 ] as const;
 
+const heroImages = [
+  { src: "/assets/img/ponte-estaiada-sp1.webp", alt: "UNIDAX — São Paulo, inteligência artificial aplicada ao negócio", priority: true },
+  { src: "/assets/img/lagoa-taquaral-campinas1.webp", alt: "UNIDAX — Campinas, tecnologia e inovação" },
+  { src: "/assets/img/hero.webp", alt: "UNIDAX — transformação empresarial com IA" },
+];
+
 export default async function Home() {
   const [cases, insights] = await Promise.all([
     getCasesCMS(),
@@ -51,7 +58,7 @@ export default async function Home() {
     <main>
       {/* ── Hero ── */}
       <section className="hero">
-        <div className="hero-bg" />
+        <HeroCarousel images={heroImages} />
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="eyebrow light">
@@ -222,7 +229,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── Serviços de IA — com imagens e links corrigidos ── */}
+{/* ── Serviços de IA — com imagens e links corrigidos ── */}
       <section className="section services" id="ia">
         <div className="container">
           <Reveal>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowIcon, MenuIcon, XIcon } from "./icons";
-const links = [["IA & Transformação", "/ia"], ["Serviços", "/servicos"], ["Cases", "/cases"], ["Insights", "/insights"], ["A UNIDAX", "/empresa"]];
+const links = [["Home", "/"], ["IA & Transformação", "/ia"], ["Serviços", "/servicos"], ["Soluções", "/solucoes"], ["Insights", "/insights"], ["A UNIDAX", "/empresa"]];
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false); const [open, setOpen] = useState(false); const navRef = useRef<HTMLElement>(null);
   useEffect(() => { const onScroll=()=>setScrolled(window.scrollY>30); onScroll(); window.addEventListener("scroll",onScroll,{passive:true}); return()=>window.removeEventListener("scroll",onScroll); },[]);

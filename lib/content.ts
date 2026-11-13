@@ -73,3 +73,42 @@ export const insights: Insight[] = [
 export function getPublishedInsights() { return insights.filter((item) => item.status === "published"); }
 export function getInsight(slug: string) { return insights.find((item) => item.slug === slug && item.status === "published"); }
 export function getCase(slug: string) { return cases.find((item) => item.slug === slug); }
+
+export type Solution = {
+  slug: string;
+  title: string;
+  text: string;
+  tags: string[];
+  href: string;
+};
+
+export const solutions: Solution[] = [
+  {
+    slug: "ia-erp",
+    title: "IA + ERP: decisões inteligentes no coração do negócio",
+    text: "Integre inteligência artificial ao seu ERP para automatizar processos, antecipar demandas e apoiar decisões com dados em tempo real.",
+    tags: ["IA", "ERP & Dynamics"],
+    href: "/contato",
+  },
+  {
+    slug: "agentes-atendimento",
+    title: "Agentes de IA para atendimento e suporte",
+    text: "Automatize triagem, resposta e encaminhamento com agentes conectados à base de conhecimento e aos sistemas da empresa.",
+    tags: ["Agentes", "Suporte"],
+    href: "/contato",
+  },
+  {
+    slug: "dados-ia",
+    title: "Dados + IA: da informação à ação",
+    text: "Una uma camada analítica robusta com modelos de IA para transformar dados operacionais em recomendações e alertas automáticos.",
+    tags: ["Dados", "IA"],
+    href: "/contato",
+  },
+  {
+    slug: "automacao-processos",
+    title: "Automação inteligente de processos",
+    text: "Combine Power Platform e IA para automatizar fluxos repetitivos, reduzir erros manuais e liberar equipes para trabalho de maior valor.",
+    tags: ["Power Platform", "IA"],
+    href: "/contato",
+  },
+];
