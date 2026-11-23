@@ -112,3 +112,105 @@ export const solutions: Solution[] = [
     href: "/contato",
   },
 ];
+
+// ─────────────────────────────────────────────
+// Página /solucoes
+// ─────────────────────────────────────────────
+
+export type FullSolution = {
+  slug: string;
+  title: string;
+  tagline: string;
+  description: string;
+  capabilities: string[];
+  href: string;
+};
+
+export const solutionsPage = {
+  solutions: [
+    {
+      slug: "ia-erp",
+      title: "IA + ERP",
+      tagline: "Decisão inteligente no coração da operação",
+      description: "Integra IA ao Dynamics 365 para automação, previsão de demanda e apoio à decisão em tempo real. Reduz ciclos de aprovação, antecipa rupturas e conecta inteligência ao fluxo operacional.",
+      capabilities: ["Integração IA-ERP", "Previsão de demanda", "Automação de aprovações", "Relatórios inteligentes", "Alertas preditivos"],
+      href: "/contato",
+    },
+    {
+      slug: "agentes-atendimento",
+      title: "Agentes para Atendimento",
+      tagline: "Atendimento que aprende, escalona e resolve",
+      description: "Agentes conectados à base de conhecimento e sistemas para triagem e resolução autônoma. Reduz volume humano nos casos de baixa complexidade sem perder a qualidade.",
+      capabilities: ["Agentes de triagem", "Base de conhecimento RAG", "Integração com CRM", "Escalada inteligente", "Relatórios de atendimento"],
+      href: "/contato",
+    },
+    {
+      slug: "dados-ia",
+      title: "Dados + IA",
+      tagline: "Da informação dispersa à inteligência acionável",
+      description: "Camada analítica + IA para transformar dados operacionais em alertas e recomendações. Une governança de dados com modelos que geram insights no momento certo.",
+      capabilities: ["Data lakehouse", "Modelos preditivos", "Dashboards IA-driven", "Alertas automáticos", "Governança de dados"],
+      href: "/contato",
+    },
+    {
+      slug: "automacao-processos",
+      title: "Automação Inteligente",
+      tagline: "Liberte sua equipe do trabalho repetitivo",
+      description: "Power Platform + IA para eliminar gargalos manuais e automatizar fluxos. Extrai dados de documentos, valida regras de negócio e integra sistemas sem intervenção humana.",
+      capabilities: ["Power Automate + IA", "Extração de documentos", "Aprovações automáticas", "Integração de sistemas", "Monitoramento de fluxos"],
+      href: "/contato",
+    },
+    {
+      slug: "transformacao-digital",
+      title: "Transformação Digital",
+      tagline: "Modernize a operação sem parar o negócio",
+      description: "Projetos que conectam sistemas, dados e pessoas com estratégia e execução integradas. Da arquitetura à adoção, com gestão de mudança e sustentação contínua.",
+      capabilities: ["Arquitetura de sistemas", "Migração de dados", "Integração via API", "Gestão de mudança", "Sustentação contínua"],
+      href: "/contato",
+    },
+    {
+      slug: "ia-produtividade",
+      title: "IA para Produtividade",
+      tagline: "Sua equipe com superpoderes de IA",
+      description: "Copilot, busca semântica interna e assistentes por função para acelerar trabalho de conhecimento. Reduz tempo em tarefas repetitivas e eleva a qualidade das entregas.",
+      capabilities: ["Microsoft Copilot", "Busca semântica interna", "Resumo de documentos", "Assistentes por função", "Treinamento e adoção"],
+      href: "/contato",
+    },
+  ] as FullSolution[],
+
+  differentials: [
+    { title: "Orientada a resultado", text: "Cada solução parte de um problema de negócio definido e tem métricas de sucesso acordadas antes do início." },
+    { title: "Integrada ao negócio", text: "Conectamos estratégia, dados, sistemas e pessoas — sem tratar IA como camada separada da operação." },
+    { title: "Preparada para escalar", text: "Arquiteturas pensadas para evoluir: do piloto à operação plena, sem refazer do zero." },
+  ],
+
+  methodology: [
+    { num: "01", title: "Diagnóstico", text: "Mapeamos o problema, os dados disponíveis e as restrições antes de propor qualquer tecnologia." },
+    { num: "02", title: "Desenho da solução", text: "Definimos arquitetura, integrações, critérios de sucesso e o plano de implementação." },
+    { num: "03", title: "Piloto", text: "Validamos o valor em escala controlada antes de comprometer investimento e equipe." },
+    { num: "04", title: "Escala", text: "Expandimos com governança, monitoramento contínuo e plano de evolução acordado." },
+  ],
+
+  segments: [
+    {
+      title: "Educação",
+      bullets: ["Agentes para suporte a alunos e coordenação acadêmica", "Automação de processos administrativos e rematrícula"],
+    },
+    {
+      title: "Saúde",
+      bullets: ["Triagem inteligente e assistência a prontuários", "Analytics preditivo para gestão de leitos e recursos"],
+    },
+    {
+      title: "Varejo e Distribuição",
+      bullets: ["Previsão de demanda e reposição automática", "Automação de atendimento e fidelização com IA"],
+    },
+    {
+      title: "Serviços Financeiros",
+      bullets: ["Análise de crédito e detecção de anomalias com IA", "Automação de compliance e processamento de documentos"],
+    },
+    {
+      title: "Indústria",
+      bullets: ["Manutenção preditiva e qualidade assistida por IA", "Integração ERP + chão de fábrica com agentes inteligentes"],
+    },
+  ],
+};

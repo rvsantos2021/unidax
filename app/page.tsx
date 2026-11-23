@@ -12,7 +12,7 @@ import { SectionHead } from "@/components/section-head";
 import { HeroCarousel } from "@/components/hero-carousel";
 import {
   aiServices, clients, ecosystem,
-  enterpriseServices, methodology, solutions, stats,
+  enterpriseServices, methodology, stats,
 } from "@/lib/content";
 import { aiLandingPages } from "@/lib/seo-content";
 import { getCasesCMS, getPublishedInsightsCMS } from "@/lib/cms";
