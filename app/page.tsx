@@ -16,6 +16,7 @@ import {
 } from "@/lib/content";
 import { aiLandingPages } from "@/lib/seo-content";
 import { getCasesCMS, getPublishedInsightsCMS } from "@/lib/cms";
+import { assetPath } from "@/lib/assets";
 
 /* ── Ícone por tag de insight ───────────────────────────── */
 const tagIcon: Record<string, ReactElement> = {
@@ -43,9 +44,9 @@ const serviceLabels = [
 ] as const;
 
 const heroImages = [
-  { src: "/assets/img/ponte-estaiada-sp1.webp", alt: "UNIDAX — São Paulo, inteligência artificial aplicada ao negócio", priority: true },
-  { src: "/assets/img/lagoa-taquaral-campinas1.webp", alt: "UNIDAX — Campinas, tecnologia e inovação" },
-  { src: "/assets/img/hero.webp", alt: "UNIDAX — transformação empresarial com IA" },
+  { src: assetPath("/assets/img/ponte-estaiada-sp1.webp"), alt: "UNIDAX — São Paulo, inteligência artificial aplicada ao negócio", priority: true },
+  { src: assetPath("/assets/img/lagoa-taquaral-campinas1.webp"), alt: "UNIDAX — Campinas, tecnologia e inovação" },
+  { src: assetPath("/assets/img/hero.webp"), alt: "UNIDAX — transformação empresarial com IA" },
 ];
 
 export default async function Home() {
@@ -108,7 +109,7 @@ export default async function Home() {
               <div className="ring ring2" />
               <div className="ring ring3" />
               <Image
-                src="/assets/img/logo.png"
+                src={assetPath("/assets/img/logo.png")}
                 alt=""
                 width={70}
                 height={70}
@@ -317,7 +318,7 @@ export default async function Home() {
               <div className="orbit one" />
               <div className="orbit two" />
               <div className="core">
-                <Image src="/assets/img/logo.png" alt="UNIDAX" width={64} height={64} />
+                <Image src={assetPath("/assets/img/logo.png")} alt="UNIDAX" width={64} height={64} />
               </div>
               <div className="label lab1"><SparkIcon    style={{ width: 18, height: 18, color: "var(--red)" }} /> IA</div>
               <div className="label lab2"><DatabaseIcon style={{ width: 18, height: 18, color: "var(--red)" }} /> ERP</div>
